@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Validate source branch
         run: |
-          if [[ ! "${{ github.head_ref }}" =~ ^feature/ ]]; then
-            echo "Only feature/* branches can merge into develop"
+          if [[ ! "${{ github.head_ref }}" =~ ^feature/ && "${{ github.head_ref }}" != "main" ]]; then
+            echo "Only feature/* or main branches can merge into develop"
             exit 1
           fi
