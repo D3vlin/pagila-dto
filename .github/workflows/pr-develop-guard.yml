@@ -5,7 +5,7 @@ on:
     branches: [ develop ]
 
 jobs:
-  check-source::
+  check-source:
     runs-on: ubuntu-latest
     steps:
       - name: Validate source branch
