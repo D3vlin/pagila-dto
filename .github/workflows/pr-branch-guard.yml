@@ -1,4 +1,4 @@
-name: PR Branch Check
+name: Develop Branch Guard
 
 on:
   pull_request:

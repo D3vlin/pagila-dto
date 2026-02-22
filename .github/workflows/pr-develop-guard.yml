@@ -1,0 +1,16 @@
+name: Develop Branch Guard
+
+on:
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  check-source::
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate source branch
+        run: |
+          if [[ ! "${{ github.head_ref }}" =~ ^feature/ ]]; then
+            echo "Only feature/* branches can merge into develop"
+            exit 1
+          fi
