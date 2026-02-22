@@ -1,28 +1,29 @@
 # Pagila DTO
 
 ## 📌 Overview
-**Pagila DTO** is part of a modular project built on top of the Pagila sample database schema for PostgreSQL.  
-This module provides a collection of **Data Transfer Objects (DTOs)** that represent structured data contracts used across application layers.
+**Pagila DTO** is one repository within a distributed, multi-repository architecture based on the Pagila sample database schema for PostgreSQL.  
+This module contains the **Data Transfer Objects (DTOs)** that act as shared data contracts between independent components of the system, including service, mapping, and persistence layers maintained in separate repositories.
 
-The goal of this project is to demonstrate a clean, scalable, and professional architecture using a real-world relational schema as the foundation.
+The project as a whole is designed to model a real-world enterprise architecture by separating responsibilities into dedicated modules (DTO, entity, mapper, and service layers), ensuring scalability, maintainability, and clear boundaries between concerns.
 
 ---
 
 ## 🎯 Purpose
-This module exists to:
+This repository exists to:
 
-- Provide immutable or controlled data representations
-- Decouple persistence entities from API and service layers
-- Define clear data contracts between modules
-- Enable safer serialization/deserialization
-- Prevent leaking internal entity structure
+- Provide standardized data contracts shared across services
+- Decouple persistence models from external interfaces
+- Ensure consistency between independent modules
+- Facilitate safe serialization and deserialization
+- Prevent leakage of internal domain or entity structures
 
-DTOs are especially useful when:
+DTOs in this architecture are primarily used when:
 
-- exposing APIs
-- transferring data between services
-- shaping responses
-- validating inputs
+- communicating between services
+- exposing API responses
+- validating incoming data
+- shaping outbound payloads
+- enforcing module boundaries
 
 ---
 

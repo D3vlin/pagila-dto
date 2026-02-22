@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>co.com.d3vlin13</groupId>
+  <groupId>co.d3vlin</groupId>
   <artifactId>pagila-dto</artifactId>
   <packaging>jar</packaging>
   <version>1.0.0</version>
@@ -62,7 +62,7 @@
   </build>
   <distributionManagement>
     <repository>
-      <id>pagila-packages</id>
+      <id>pagila</id>
       <url>https://maven.pkg.github.com/d3vlin/pagila-dto</url>
       <releases>
         <enabled>true</enabled>
