@@ -63,7 +63,7 @@
   <distributionManagement>
     <repository>
       <id>pagila</id>
-      <url>https://maven.pkg.github.com/d3vlin/pagila-dto</url>
+      <url>https://maven.pkg.github.com/d3vlin/pagila-packages</url>
       <releases>
         <enabled>true</enabled>
       </releases>
