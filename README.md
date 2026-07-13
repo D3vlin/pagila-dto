@@ -86,10 +86,10 @@ This module can be consumed by:
 
 ```xml
 <dependency>
-    <groupId>co.co.d3vlin</groupId>
+    <groupId>co.d3vlin</groupId>
     <artifactId>pagila-dto</artifactId>
     <version>1.0.0</version>
-</dependency>}
+</dependency>
 ```
 
 ---
