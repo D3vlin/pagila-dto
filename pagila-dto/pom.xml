@@ -14,12 +14,6 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <lombok.version>1.18.42</lombok.version>
   </properties>
-  <repositories>
-    <repository>
-      <id>pagila</id>
-      <url>https://maven.pkg.github.com/d3vlin/pagila-packages</url>
-    </repository>
-  </repositories>
   <dependencies>
     <dependency>
       <groupId>io.swagger.core.v3</groupId>
