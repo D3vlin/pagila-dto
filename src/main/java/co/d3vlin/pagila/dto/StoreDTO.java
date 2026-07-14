@@ -23,16 +23,16 @@ public class StoreDTO {
     private Integer id;
 
     @Schema(
-            name = "id",
-            description = "Store ID",
-            title = "Store ID"
+            name = "managerStaff",
+            description = "Store Manager Staff",
+            title = "Store Manager Staff"
     )
     private StaffDTO managerStaff;
 
     @Schema(
-            name = "id",
-            description = "Store ID",
-            title = "Store ID"
+            name = "address",
+            description = "Store Address",
+            title = "Store Address"
     )
     private AddressDTO address;
 

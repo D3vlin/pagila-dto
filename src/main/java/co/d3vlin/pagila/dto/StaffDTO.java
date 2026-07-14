@@ -52,8 +52,8 @@ public class StaffDTO {
 
     @Schema(
             name = "store",
-            description = "Staff Store",
-            title = "Staff Store"
+            description = "Staff Store Reference",
+            title = "Staff Store Reference"
     )
     private StoreDTO store;
 
