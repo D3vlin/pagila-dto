@@ -2,6 +2,9 @@ package co.d3vlin.pagila.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -27,6 +30,8 @@ public class CityDTO {
             description = "City",
             title = "City"
     )
+    @NotBlank(message = "{validation.city.city.required}")
+    @Size(min = 1, message = "{validation.city.city.length}")
     private String city;
 
     @Schema(
@@ -34,6 +39,7 @@ public class CityDTO {
             description = "City Country",
             title = "City Country"
     )
+    @NotNull(message = "{validation.city.country.required}")
     private CountryDTO country;
 
     @Schema(
@@ -41,5 +47,6 @@ public class CityDTO {
             description = "City Last Update",
             title = "City Last Update"
     )
+    @NotBlank(message = "{validation.city.lastUpdate.required}")
     private LocalDateTime lastUpdate;
 }

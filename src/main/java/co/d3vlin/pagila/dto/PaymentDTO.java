@@ -2,6 +2,9 @@ package co.d3vlin.pagila.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -28,6 +31,7 @@ public class PaymentDTO {
             description = "Payment Customer",
             title = "Payment Customer"
     )
+    @NotNull(message = "{validation.payment.customer.required}")
     private CustomerDTO customer;
 
     @Schema(
@@ -35,6 +39,7 @@ public class PaymentDTO {
             description = "Payment Staff",
             title = "Payment Staff"
     )
+    @NotNull(message = "{validation.payment.staff.required}")
     private StaffDTO staff;
 
     @Schema(
@@ -42,6 +47,7 @@ public class PaymentDTO {
             description = "Payment Rental",
             title = "Payment Rental"
     )
+    @NotNull(message = "{validation.payment.rental.required}")
     private RentalDTO rental;
 
     @Schema(
@@ -49,6 +55,8 @@ public class PaymentDTO {
             description = "Payment Amount",
             title = "Payment Amount"
     )
+    @NotBlank(message = "{validation.payment.amount.required}")
+    @Digits(integer = 5, fraction = 2, message = "{validation.payment.amount.digits}")
     private BigDecimal amount;
 
     @Schema(
@@ -56,5 +64,6 @@ public class PaymentDTO {
             description = "Payment Payment Date",
             title = "Payment Payment Date"
     )
+    @NotBlank(message = "{validation.payment.paymentDate.required}")
     private LocalDateTime paymentDate;
 }
