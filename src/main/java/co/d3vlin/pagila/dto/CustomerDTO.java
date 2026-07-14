@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Data
 @Schema(
@@ -77,7 +77,7 @@ public class CustomerDTO {
             description = "Customer Last Update",
             title = "Customer Last Update"
     )
-    private OffsetDateTime lastUpdate;
+    private LocalDateTime lastUpdate;
 
     @Schema(
             name = "active",

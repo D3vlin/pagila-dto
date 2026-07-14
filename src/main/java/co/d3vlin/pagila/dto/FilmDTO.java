@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.time.Year;
 import java.util.List;
 
@@ -100,7 +100,7 @@ public class FilmDTO {
             description = "Film Last Update",
             title = "Film Last Update"
     )
-    private OffsetDateTime lastUpdate;
+    private LocalDateTime lastUpdate;
 
     @Schema(
             name = "specialFeatures",

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Data
 @Schema(
@@ -27,7 +27,7 @@ public class RentalDTO {
             description = "Rental Rental Date",
             title = "Rental Rental Date"
     )
-    private OffsetDateTime rentalDate;
+    private LocalDateTime rentalDate;
 
     @Schema(
             name = "inventory",
@@ -48,7 +48,7 @@ public class RentalDTO {
             description = "Rental Return Date",
             title = "Rental Return Date"
     )
-    private OffsetDateTime returnDate;
+    private LocalDateTime returnDate;
 
     @Schema(
             name = "staff",
@@ -62,5 +62,5 @@ public class RentalDTO {
             description = "Rental Last Update",
             title = "Rental Last Update"
     )
-    private OffsetDateTime lastUpdate;
+    private LocalDateTime lastUpdate;
 }

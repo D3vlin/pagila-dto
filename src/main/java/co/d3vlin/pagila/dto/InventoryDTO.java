@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Data
 @Schema(
@@ -41,5 +41,5 @@ public class InventoryDTO {
             description = "Inventory Last Update",
             title = "Inventory Last Update"
     )
-    private OffsetDateTime lastUpdate;
+    private LocalDateTime lastUpdate;
 }
