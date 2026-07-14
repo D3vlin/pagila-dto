@@ -84,4 +84,11 @@ public class StaffDTO {
             title = "Staff Last Update"
     )
     private LocalDateTime lastUpdate;
+
+    @Schema(
+            name = "picture",
+            description = "Staff Picture",
+            title = "Staff Picture"
+    )
+    private byte[] picture;
 }
