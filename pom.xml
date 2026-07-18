@@ -4,7 +4,7 @@
   <groupId>co.d3vlin</groupId>
   <artifactId>pagila-dto</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>pagila-dto</name>
   <url>https://github.com/D3vlin</url>
   <properties>
@@ -74,8 +74,18 @@
         <enabled>true</enabled>
       </releases>
       <snapshots>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
       </snapshots>
     </repository>
+    <snapshotRepository>
+      <id>pagila</id>
+      <url>https://maven.pkg.github.com/d3vlin/pagila-dto</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </snapshotRepository>
   </distributionManagement>
 </project>
