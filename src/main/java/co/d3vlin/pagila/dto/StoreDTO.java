@@ -2,9 +2,11 @@ package co.d3vlin.pagila.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Data
 @Schema(
@@ -23,17 +25,19 @@ public class StoreDTO {
     private Integer id;
 
     @Schema(
-            name = "id",
-            description = "Store ID",
-            title = "Store ID"
+            name = "managerStaff",
+            description = "Store Manager Staff",
+            title = "Store Manager Staff"
     )
+    @NotNull(message = "{validation.store.managerStaff.required}")
     private StaffDTO managerStaff;
 
     @Schema(
-            name = "id",
-            description = "Store ID",
-            title = "Store ID"
+            name = "address",
+            description = "Store Address",
+            title = "Store Address"
     )
+    @NotNull(message = "{validation.store.address.required}")
     private AddressDTO address;
 
     @Schema(
@@ -41,5 +45,6 @@ public class StoreDTO {
             description = "Store Last Update",
             title = "Store Last Update"
     )
-    private OffsetDateTime lastUpdate;
+    @NotBlank(message = "{validation.store.lastUpdate.required}")
+    private LocalDateTime lastUpdate;
 }

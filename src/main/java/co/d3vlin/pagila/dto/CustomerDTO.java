@@ -2,10 +2,13 @@ package co.d3vlin.pagila.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Data
 @Schema(
@@ -28,6 +31,7 @@ public class CustomerDTO {
             description = "Customer Store",
             title = "Customer Store"
     )
+    @NotNull(message = "{validation.customer.store.required}")
     private StoreDTO store;
 
     @Schema(
@@ -35,6 +39,8 @@ public class CustomerDTO {
             description = "Customer First Name",
             title = "Customer First Name"
     )
+    @NotBlank(message = "{validation.customer.firstName.required}")
+    @Size(min = 1, message = "{validation.customer.firstName.length}")
     private String firstName;
 
     @Schema(
@@ -42,6 +48,8 @@ public class CustomerDTO {
             description = "Customer Last Name",
             title = "Customer Last Name"
     )
+    @NotBlank(message = "{validation.customer.lastName.required}")
+    @Size(min = 1, message = "{validation.customer.lastName.length}")
     private String lastName;
 
     @Schema(
@@ -56,6 +64,7 @@ public class CustomerDTO {
             description = "Customer Address",
             title = "Customer Address"
     )
+    @NotNull(message = "{validation.customer.address.required}")
     private AddressDTO address;
 
     @Schema(
@@ -70,6 +79,7 @@ public class CustomerDTO {
             description = "Customer Create Date",
             title = "Customer Create Date"
     )
+    @NotBlank(message = "{validation.customer.createDate.required}")
     private LocalDate createDate;
 
     @Schema(
@@ -77,7 +87,8 @@ public class CustomerDTO {
             description = "Customer Last Update",
             title = "Customer Last Update"
     )
-    private OffsetDateTime lastUpdate;
+    @NotBlank(message = "{validation.customer.lastUpdate.required}")
+    private LocalDateTime lastUpdate;
 
     @Schema(
             name = "active",

@@ -35,11 +35,12 @@ The full architecture is intentionally split across multiple repositories, where
 
 Related modules live in separate repositories:
 
-| Module | Responsibility | Repository |
-|------|----------------|-----------|
-| dto | Data transport | https://github.com/D3vlin/pagila-dto |
+| Module | Responsibility   | Repository                              |
+|--------|------------------|-----------------------------------------|
+| dto    | Data transport   | https://github.com/D3vlin/pagila-dto    |
 | entity | Database mapping | https://github.com/D3vlin/pagila-entity |
-| mapper | Data access | https://github.com/D3vlin/pagila-mapper |
+| mapper | Data access      | https://github.com/D3vlin/pagila-mapper |
+| api    | REST interface   | https://github.com/D3vlin/pagila-api    |
 
 ---
 
