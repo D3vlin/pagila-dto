@@ -4,7 +4,7 @@
   <groupId>co.d3vlin</groupId>
   <artifactId>pagila-dto</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>pagila-dto</name>
   <url>https://github.com/D3vlin</url>
   <properties>
@@ -36,11 +36,6 @@
       <artifactId>jakarta.validation-api</artifactId>
       <version>3.1.1</version>
     </dependency>
-    <dependency>
-      <groupId>tools.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>3.0.3</version>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -68,8 +63,18 @@
         <enabled>true</enabled>
       </releases>
       <snapshots>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
       </snapshots>
     </repository>
+    <snapshotRepository>
+      <id>pagila</id>
+      <url>https://maven.pkg.github.com/d3vlin/pagila-dto</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </snapshotRepository>
   </distributionManagement>
 </project>

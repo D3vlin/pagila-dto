@@ -2,9 +2,11 @@ package co.d3vlin.pagila.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Data
 @Schema(
@@ -27,6 +29,8 @@ public class CountryDTO {
             description = "Country",
             title = "Country"
     )
+    @NotBlank(message = "{validation.country.country.required}")
+    @Size(min = 1, message = "{validation.country.country.length}")
     private String country;
 
     @Schema(
@@ -34,5 +38,6 @@ public class CountryDTO {
             description = "Country Last Update",
             title = "Country Last Update"
     )
-    private OffsetDateTime lastUpdate;
+    @NotBlank(message = "{validation.country.lastUpdate.required}")
+    private LocalDateTime lastUpdate;
 }

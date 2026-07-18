@@ -4,11 +4,19 @@ on:
   pull_request:
     branches: [ main, develop ]
   push:
-    branches: [main, develop]
+    branches: [ main, develop ]
+
+concurrency:
+  group: dto-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Checkout
@@ -19,7 +27,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
+          cache: maven
 
       - name: Build
         run: mvn -B -ntp clean verify
-        working-directory: pagila-dto
